@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #0052d0;
+}
+@font-face {
+  font-family: IBM;
+  src: url("/public/fonts/IBM/IBMPlexSansArabic-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: IBM;
+  src: url("/public/fonts/IBM/IBMPlexSansArabic-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: IBM;
+  src: url("/public/fonts/IBM/IBMPlexSansArabic-Medium.ttf");
+  font-weight: 500;
+}
