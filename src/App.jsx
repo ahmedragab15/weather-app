@@ -26,7 +26,10 @@ function App() {
   const [data, setData] = useState(null);
   const [errorMessage, setErrorMessage] = useState("");
   const [lang, setLang] = useState("ar");
-  const [city, setCity] = useState("cairo");
+  const [city, setCity] = useState(() => {
+    const savedCity = localStorage.getItem("City");
+    return savedCity ? JSON.parse(savedCity) : "cairo";
+  });
   const [inputValue, setInputValue] = useState("");
 
   const day = lang === "ar" ? weekdayAr[date.getDay()] : weekday[date.getDay()];
@@ -39,6 +42,7 @@ function App() {
         const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_Key}&units=metric&lang=${lang}`, { signal: controller.signal });
         setData(res.data);
         setIsLoading(false);
+        localStorage.setItem("City", JSON.stringify(city));
       } catch (error) {
         if (error.code === "ERR_CANCELED") return;
         setData(null);
