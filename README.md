@@ -18,6 +18,7 @@ This is a simple weather application built with **React**, **Material-UI (MUI)**
 ## 🧑‍💻 Tech Stack
 
 - **React**
+- **Redux Toolkit**
 - **Material-UI**
 - **Axios**
 - **OpenWeatherMap API**
