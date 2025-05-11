@@ -29,7 +29,7 @@ const App = () => {
   const [inputValue, setInputValue] = useState("");
 
   const day = language === "ar" ? weekdayAr[date.getDay()] : weekday[date.getDay()];
-  const dateNow = language === "ar" ? date.toLocaleDateString("ar-SA") : date.toLocaleDateString();
+  const dateNow = language === "ar" ? date.toLocaleDateString("ar-EG") : date.toLocaleDateString();
 
   useEffect(() => {
     dispatch(fetchApi({ city, lang: language }));
